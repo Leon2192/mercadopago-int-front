@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Cart from "./components/Cart";
 import ItemListContainer from "./components/ItemListContainer";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
@@ -14,7 +15,9 @@ function App() {
         <Route path="/productos" element={<ItemListContainer />} />
         <Route path="/productos/:catId" element={<ItemListContainer />} />
         <Route path="/detalle/:itemId" element={<ItemDetailContainer />} />
+         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<h2> 404 . PAGINA NO EXISTENTE</h2>} />
+
       </Routes>
     </BrowserRouter>
   );

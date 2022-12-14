@@ -10,7 +10,6 @@ const Cart = () => {
     <div className="carritoVacioDetail">
       <h2 className="carritoVacioMsg"> CARRITO VACIO</h2>
       <Link to="/Productos" className="btn btn-info">
-        {" "}
         VOLVER A PRODUCTOS{" "}
       </Link>
     </div>

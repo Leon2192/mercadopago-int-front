@@ -1,27 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 .App {
   text-align: center;
+}
+
+.logoHeader {
+  height: 200px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logoNav {
+  height: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100%;
+  background-image: linear-gradient(to right, #f5fafc, #46a3c3);
+}
+/* 
+@media (prefers-reduced-motion: no-preference) {
+  .styloCarrito {
+    animation: App-logo-spin infinite 5s linear;
+  }
+  
+}  */
+.styloCarrito {
+  font-size: 3rem;
+  color: rgb(68, 67, 67);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.styloCarritoVacio {
+  visibility: hidden;
+}
+.numberCarrito {
+  font-size: 2rem;
+  font-weight: 900;
+  color: black;
+  margin: 1px 15px 1px 15px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .App-link {
@@ -33,6 +51,145 @@
     transform: rotate(0deg);
   }
   to {
+    transform: rotateY(180deg);
+  }
+}
+.botonera {
+  display: flex;
+  justify-content: center;
+}
+.conteo {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.boton-eliminarItem {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 100%;
+}
+.boton-sumarItem {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 100%;
+}
+.list_products {
+  display: inline-table;
+  justify-content: space-around;
+  border-radius: 5px;
+  width: 200px;
+  margin: 10px;
+  border: 2px solid black;
+}
+.list_products span {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+.estiloenDetalle {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+.estilosenDetalle {
+  text-align: -webkit-center;
+}
+
+.stylingCard {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.stylingCard_h6 {
+  font-size: 20px;
+}
+
+.titleSmall {
+  font-size: 12px;
+}
+
+.carritoVacioDetail {
+  display: block;
+  text-align: -webkit-center;
+}
+.carritoVacioMsg {
+  font-size: 4rem;
+  background-color: rgb(228, 41, 41);
+  width: 30%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.stylingItemDetail span {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+.mapFlex {
+  display: flex;
+  justify-content: center;
+}
+.mapCenter {
+  text-align: center;
+}
+.loadingMessage {
+  text-align: center;
+  margin: 100px auto;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(39, 22, 189);
+  font-weight: 900;
+}
+.animateCargando {
+  margin: 100px auto;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  border-radius: 50%;
+  position: relative;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #765cd3;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.inputProductos {
+  font-weight: 900;
+  font-family: "Montserrat";
+  color: black;
+  font-size: 20px;
+  border-color: #000;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.inputProductos:hover {
+  cursor: pointer;
+  background-color: #86c3d8;
 }
