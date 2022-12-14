@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import ItemListContainer from "./components/ItemListContainer";
+import Navbar from "./components/Navbar";
+import Home from "./Pages/Home";
+import ItemDetailContainer from "./Pages/ItemDetailContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/productos" element={<ItemListContainer />} />
+        <Route path="/productos/:catId" element={<ItemListContainer />} />
+        <Route path="/detalle/:itemId" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h2> 404 . PAGINA NO EXISTENTE</h2>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
